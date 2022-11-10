@@ -1,18 +1,18 @@
 import React,{useState, useEffect} from 'react';
 import { StyleSheet, View, Text, FlatList } from 'react-native';
 import api from './Api'
-export default function Peruibe() {
+export default function Santos() {
   const [dados, setDados] = useState("");
   useEffect(()=>{
       async function previsao(){
-        const Response = await api.get('weather?array_limit=10&fields=only_results,temp,city_name,date,time,forecast,max,min,wind_speedy,description&key=e4c586c4bd&city_name=Peruibe,SP');
+        const Response = await api.get('weather?array_limit=10&fields=only_results,temp,city_name,date,time,forecast,max,min,wind_speedy,description&key=e4c586c4bd&city_name=Santos,SP');
         setDados(Response.data.results.forecast);
       }
       previsao();
   },[]);
     return (
     <View style={styles.bloco}>
-        <Text>Cidade de Peruibe</Text>
+        <Text>Cidade de Santos</Text>
         <FlatList
         data={dados}
         renderItem={({item})=>{

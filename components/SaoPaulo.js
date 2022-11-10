@@ -4,13 +4,13 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 export default function SaoPaulo({navigation}) {
  return (
     <View style={styles.bloco}>
-        <Text>Cidade de Sao Paulo</Text>
+        <Text>Estado de Sao Paulo</Text>
 
         <TouchableOpacity
-            onPress={()=>navigation.navigate("Peruibe")}
+            onPress={()=>navigation.navigate("Baixada")}
             >
             <Text>
-                Peruibe
+                Baixada Santista
             </Text>
         </TouchableOpacity>
     </View>
